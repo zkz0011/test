@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="goods-item" *ngFor = "let g of goods; let i = index;" [ngClass]="i === 0 ? 'is-first' : ''">
+        <img class="goods-img" src="{{g.img}}" />
+        <div class="goods-name">{{g.name}}</div>
+        <span class="goods-price"><span class="goods-price">￥{{g.price}}</span></span>
+        <div class="delete" (click)="deleteGood(g.id)">进入查看></div>
+    </div>
+</div>

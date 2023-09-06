@@ -1,0 +1,68 @@
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-areas: 'a b c d'
+                         'a e f g';
+    width: 100%;
+    height: 36rem;
+    border: 5px solid red;
+    background-color: #fff;
+}
+.goods-item {
+    border: 1px solid gainsboro;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.is-first {
+    grid-area: a;
+}
+
+.is-first > .goods-name {
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.is-first > .goods-img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.goods-name {
+    font-size: 1.5rem;
+    color: #333333;
+    font-weight: 400;
+}
+
+.goods-price {
+    color: red;
+}
+
+.goods-img {
+    width: 15rem;
+    height: 15rem;
+    vertical-align: middle;
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+}
+
+.goods-item:hover > .goods-img {
+    right: 2rem;
+    transition: all 1s;
+}
+
+.delete {
+    line-height: 2rem;
+    font-size: 1rem;
+    border-radius: 0 10px 10px 0;
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: rgb(202, 38, 66);
+    color: #fff;
+}

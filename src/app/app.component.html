@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button (click)="setActive(item.id)" class="btn" *ngFor = "let item of btnList; let i = index;">{{item.name}}</button>
+  <app-list *ngIf="active === 1" class="goods-list"></app-list>
+  <app-fkm *ngIf="active === 2">FKM</app-fkm>
+  <app-six-year *ngIf="active === 3">近六年</app-six-year>
+</body>
+</html>
